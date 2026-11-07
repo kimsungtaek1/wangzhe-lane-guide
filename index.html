@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>중국판 왕자영요 상대법 — 元流之子 다섯 형태 · S45 月照长安</title>
+<meta name="description" content="중국판 《王者荣耀》 元流之子 다섯 형태별 5대 공격로 상대법, 라인별 대항 영웅 찾기, 공식 시즌 확인.">
+<style>
+
+:root{
+  --bg:#f5f2ec; --paper:#fffdf9; --ink:#1f252d; --muted:#5f6b78;
+  --line:#e6ded1; --line-strong:#d3c6b2;
+  --red:#9b2c2c; --red-deep:#6d1c1c; --gold:#c49a4a;
+  --shadow:0 10px 30px rgba(44,32,20,.06);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Noto Sans CJK KR","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;
+}
+img{max-width:100%;height:auto}
+a{color:var(--red);text-decoration-thickness:.06em;text-underline-offset:.18em}
+a:hover{color:var(--red-deep)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:-52px;z-index:100;background:#fff;color:var(--ink);padding:8px 12px;border-radius:8px;font-weight:700;text-decoration:none;transition:top .15s ease}
+.skip-link:focus{top:10px}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(27,32,39,.97);border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:0 20px;min-height:58px}
+.brand{color:#fff;font-weight:800;text-decoration:none;letter-spacing:-.01em;white-space:nowrap;font-size:15px}
+.brand span{color:var(--gold)}
+.brand:hover{color:#fff}
+.nav{display:flex;gap:3px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:#cfd6dd;text-decoration:none;font-size:14px;font-weight:650;padding:8px 11px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav a[aria-current="page"]{background:var(--gold);color:#241a08}
+
+.page-head{background:linear-gradient(135deg,#2a3038 0%,#3d2a25 55%,#6b2323 100%);color:#fff;position:relative;overflow:hidden}
+.page-head::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(196,154,74,.28),transparent 45%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.08),transparent 40%);pointer-events:none}
+.page-head-inner{max-width:1120px;margin:0 auto;padding:46px 20px 38px;position:relative;z-index:1}
+.eyebrow{margin:0;color:#d8c39a;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(26px,4.6vw,42px);line-height:1.25;margin:12px 0 14px;letter-spacing:-.02em;font-weight:850}
+.head-sub{color:#e8dcc9;max-width:780px;margin:0;font-size:15.5px}
+.head-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#f1e9db}
+.tag-form{background:var(--gold);border-color:var(--gold);color:#2b1e05}
+
+.season-strip{background:#fff;border-bottom:1px solid var(--line)}
+.season-inner{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:7px 14px;align-items:center;font-size:13.5px;color:var(--muted)}
+.season-label{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.season-inner strong{color:var(--ink)}
+.season-inner a{font-weight:700}
+.dot{color:#b3a894}
+
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 64px}
+.doc-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:13.5px;color:var(--muted);box-shadow:var(--shadow)}
+.doc-meta strong{color:var(--ink)}
+.notice{margin:18px 0 0;padding:13px 15px;border:1px solid #e8dcc3;border-left:4px solid var(--gold);border-radius:10px;background:#fffaf0;font-size:13.5px;color:#4b4333;line-height:1.68}
+.notice a{color:#7a4b12}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.toc a{font-size:13px;font-weight:650;color:#4b5562;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 11px;text-decoration:none}
+.toc a:hover{border-color:var(--accent);color:var(--red)}
+
+.lead{font-size:16.5px;color:#38424e;margin:22px 0 0}
+h2{font-size:clamp(21px,2.6vw,27px);margin:44px 0 16px;line-height:1.35;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
+h2::before{content:"";width:5px;height:1.05em;border-radius:3px;background:var(--accent,var(--red));display:inline-block;flex:none}
+h3{font-size:16px;margin:28px 0 12px;color:var(--muted);font-weight:750}
+
+.plan-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.plan-list li{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--accent,var(--red));border-radius:10px;padding:12px 16px;font-size:15px}
+
+.group-head{display:flex;align-items:center;gap:10px;margin:28px 0 12px}
+.group-head h3{margin:0;font-size:16px;color:#3d4652;font-weight:800}
+.group-head .count{font-size:12px;color:var(--muted);background:#eee8dc;border-radius:999px;padding:2px 8px;font-weight:700}
+
+.matchup-grid{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+.matchup-card{display:flex;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:0 2px 6px rgba(44,32,20,.03);scroll-margin-top:84px;transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.matchup-card:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-1px)}
+.hero-icon{width:48px;height:48px;border-radius:10px;object-fit:cover;flex:none;border:1px solid var(--line);background:#eee}
+.matchup-body{min-width:0}
+.matchup-head{margin:0;line-height:1.35}
+.hero-name{font-weight:800;font-size:15.5px;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.matchup-text{display:block;margin:2px 0 0;font-size:14px;line-height:1.62;color:#48525e}
+
+.callout{background:linear-gradient(135deg,#fff8e9,#fffdf7);border:1px solid #ecd9ae;border-left:5px solid var(--gold);border-radius:14px;padding:18px 20px;margin-top:22px}
+.callout h2{margin:0 0 8px;font-size:19px;display:block}
+.callout h2::before{display:none}
+.callout p{margin:0;font-size:15px;color:#4b4333}
+
+.source-list{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.source-list li{position:relative;padding:10px 14px 10px 30px;background:var(--paper);border:1px solid var(--line);border-radius:9px;font-size:13.5px;color:#505b67}
+.source-list li::before{content:"›";position:absolute;left:12px;top:10px;color:var(--accent,var(--red));font-weight:900}
+
+.pager{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a,.pager .pager-disabled{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:10px 13px;text-decoration:none;font-size:12.5px;color:var(--muted);display:block}
+.pager a:hover{border-color:var(--accent,var(--red))}
+.pager strong{display:block;font-size:15px;color:var(--ink);margin-top:2px}
+.pager .pager-next{text-align:right}
+.pager .pager-home{text-align:center;align-self:center;border:0;background:none;padding:0;font-weight:750}
+.pager .pager-home a{border:0;background:none;padding:0;color:var(--red)}
+
+.site-footer{margin-top:20px;background:#20262e;color:#b9c2cb}
+.footer-inner{max-width:1120px;margin:0 auto;padding:26px 20px 30px;font-size:12.5px;line-height:1.8}
+.footer-inner p{margin:0 0 5px}
+.footer-inner strong{color:#f2e8d7}
+.footer-inner a{color:#d9c08a}
+.footer-top{display:inline-block;margin-top:8px;font-weight:700}
+
+/* index */
+.kicker{margin:0 0 4px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,var(--red));font-weight:800}
+.section-head h2{margin-top:0;margin-bottom:10px}
+.ko-inline{font-size:.55em;font-weight:700;color:var(--muted);letter-spacing:0}
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0 0}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.fact span{display:block;font-size:12px;color:var(--muted);font-weight:650}
+.fact strong{display:block;font-size:17px;margin-top:2px;letter-spacing:-.01em;line-height:1.4}
+.fact small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:18px}
+.form-card{--accent:#9b2c2c;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.form-top{display:flex;align-items:center;gap:12px}
+.form-icon{width:56px;height:56px;border-radius:12px;object-fit:cover;border:1px solid var(--line);flex:none;background:#eee}
+.form-top h3{margin:0;font-size:22px;line-height:1.2;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;display:block}
+.form-ko{display:block;font-size:12.5px;color:var(--muted);font-weight:650;margin-top:2px}
+.form-title{margin:0;font-size:12px;color:var(--accent);font-weight:750}
+.form-lane{margin:0;font-size:13.5px;color:#3f4a56;background:#f4efe5;border-radius:8px;padding:7px 10px}
+.form-lane strong{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.form-desc{margin:0;font-size:13.5px;color:#4a5561;line-height:1.65;flex:1}
+.form-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:2px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-size:13px;font-weight:750;padding:8px 11px;border-radius:8px}
+.btn:hover{filter:brightness(.92);color:#fff}
+.link{font-size:12.5px;font-weight:650;text-decoration:none}
+
+.lookup-panel{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.search-box{position:relative}
+.search-box input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line-strong);font-size:15px;background:#fff;color:var(--ink);font-family:inherit}
+.search-box input::placeholder{color:#9a948a}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.filter-btn{border:1px solid var(--line-strong);background:#fff;color:#3b4652;padding:7px 12px;border-radius:999px;font-size:13.5px;font-weight:650;cursor:pointer;font-family:inherit}
+.filter-btn:hover{border-color:var(--ink)}
+.filter-btn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.lookup-result{font-size:13px;color:var(--muted);margin:12px 0 0}
+
+.lane-block{border-top:1px solid var(--line);padding-top:18px;margin-top:22px;scroll-margin-top:80px}
+.lane-block:first-child{border-top:0;margin-top:16px;padding-top:0}
+.lane-block-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:10px}
+.lane-block-head h3{margin:0;font-size:18px;color:var(--ink);font-weight:800;display:flex;align-items:baseline;gap:7px}
+.lane-block-head .cn{font-size:14px;color:var(--accent);font-weight:750;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.lane-block-head .form{font-size:12px;color:var(--muted);font-weight:650;background:#efe9dd;border-radius:999px;padding:3px 8px}
+.lane-count{font-size:12px;color:var(--muted);font-weight:700}
+.lane-open{margin-left:auto;font-size:13px;font-weight:750;text-decoration:none;color:var(--accent)}
+.hero-links{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;list-style:none;padding:0;margin:0}
+.hero-link{display:flex;align-items:center;gap:9px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:7px 9px;text-decoration:none;color:inherit;min-width:0}
+.hero-link:hover{border-color:var(--accent);background:#fff;color:inherit}
+.hero-link img{width:34px;height:34px;border-radius:8px;object-fit:cover;flex:none;border:1px solid var(--line);background:#eee}
+.hero-link .txt{min-width:0}
+.hero-link .n{font-weight:750;font-size:14px;display:block;line-height:1.3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.hero-link .m{font-size:11.5px;color:var(--muted);display:block;line-height:1.3}
+.hero-link .arrow{margin-left:auto;color:var(--muted);font-size:12px}
+.empty{text-align:center;padding:24px;background:var(--paper);border:1px dashed var(--line-strong);border-radius:12px;color:var(--muted);font-size:14px;margin-top:18px}
+
+.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.doc-card{display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px;text-decoration:none;color:inherit;box-shadow:0 2px 5px rgba(44,32,20,.03);transition:border-color .15s ease,transform .15s ease}
+.doc-card:hover{border-color:var(--accent,var(--red));transform:translateY(-1px);color:inherit}
+.doc-form{font-size:11.5px;font-weight:750;color:var(--accent,var(--red));letter-spacing:.02em}
+.doc-title{font-size:19px;font-weight:800;color:var(--ink);display:flex;align-items:baseline;gap:7px}
+.doc-title .cn{font-size:13px;color:var(--muted);font-weight:650}
+.doc-meta-line{font-size:12.5px;color:var(--muted)}
+.doc-arrow{margin-top:auto;padding-top:6px;font-size:12.5px;font-weight:750;color:var(--red)}
+
+.file-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:7px}
+.file-list li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13.5px}
+.file-list a{font-weight:750;text-decoration:none}
+.file-list span{color:var(--muted);font-size:12.5px}
+.check-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:7px}
+.check-list li{position:relative;padding-left:24px;font-size:13.5px;color:#4a5561}
+.check-list li::before{content:"✓";position:absolute;left:0;color:#2f7a5a;font-weight:900}
+
+@media (max-width:760px){
+  .topbar-inner{min-height:54px;padding:0 12px;gap:8px}
+  .brand{font-size:14px}
+  .nav{gap:2px}
+  .nav a{font-size:12.5px;padding:7px 8px}
+  .page-head-inner{padding:32px 16px 26px}
+  .head-sub{font-size:14.5px}
+  .season-inner{padding:10px 16px;font-size:12.5px;gap:6px 12px}
+  .wrap{padding:18px 14px 46px}
+  .doc-meta{padding:10px 12px;font-size:12.5px;gap:6px 10px}
+  h2{margin-top:34px}
+  .matchup-grid{grid-template-columns:1fr;gap:9px}
+  .matchup-card{padding:10px}
+  .hero-icon{width:44px;height:44px}
+  .hero-links{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:7px}
+  .hero-link{padding:6px 8px}
+  .form-grid,.doc-grid,.fact-grid{grid-template-columns:1fr}
+  .lane-open{margin-left:0}
+  .pager{grid-template-columns:1fr;gap:8px}
+  .pager .pager-next{text-align:left}
+}
+@media print{
+  .topbar,.toc,.pager,.skip-link,.filters,.search-box,.lookup-panel{display:none!important}
+  body{background:#fff}
+  .matchup-card,.form-card,.doc-card{box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+
+</style>
+</head>
+<body id="top" style="--accent:#9b2c2c">
+<a class="skip-link" href="#content">본문으로 건너뛰기</a>
+<nav class="topbar" aria-label="문서 내비게이션">
+<div class="topbar-inner">
+<a class="brand" href="index.html">王者荣耀 <span>상대법</span></a>
+<div class="nav">
+<a href="index.html" aria-current="page" title="전체 문서">홈</a>
+<a href="대항로.html" title="对抗路">대항로</a>
+<a href="발육로.html" title="发育路">발육로</a>
+<a href="중로.html" title="中路">중로</a>
+<a href="정글.html" title="打野">정글</a>
+<a href="유주.html" title="游走">유주</a>
+</div></div></nav>
+<header class="page-head">
+<div class="page-head-inner">
+<p class="eyebrow">王者荣耀 · 元流之子 다섯 형태</p>
+<h1>중국판 왕자영요 상대법</h1>
+<p class="head-sub">원류지자로 중국 서버 5대 공격로를 상대하는 방법. 대항로·발육로·중로·정글·유주 문서와 라인별 영웅 찾기를 한곳에 모았습니다.</p>
+<div class="head-tags">
+<span class="tag tag-form">元流之子 · 5개 형태</span>
+<span class="tag">S45 月照长安</span>
+<span class="tag">2026-11-08 확인</span>
+</div>
+</div>
+</header>
+<div class="season-strip"><div class="season-inner">
+<span class="season-label">적용 시즌</span><strong>S45 月照长安</strong>
+<span>2026-09-23 업데이트</span><span class="dot" aria-hidden="true">·</span>
+<span>공식 확인 2026-11-08</span><span class="dot" aria-hidden="true">·</span>
+<a href="https://pvp.qq.com/cp/a20190320bbgxsmm/index.html" target="_blank" rel="noopener noreferrer">공식 버전 안내 ↗</a>
+<a href="https://pvp.qq.com/web201605/js/herolist.json" target="_blank" rel="noopener noreferrer">영웅 목록 ↗</a>
+</div></div>
+<main id="content" class="wrap">
+<section aria-labelledby="overview-title">
+<p class="kicker">다직업 영웅 개요</p>
+<h2 id="overview-title">元流之子 <span class="ko-inline">원류지자</span></h2>
+<p class="lead"><strong>중국판 《王者荣耀》의 다직업 영웅</strong>입니다. 2024-06-27 S36 시즌에 坦克·法师로 등장했고, 射手(2025-04-23), 辅助(2025-10-09), 刺客(2026-04-01, S43)가 차례로 추가되며 다섯 직업이 완성됐습니다. 경기 전에 직업을 고르며, 형태마다 전용 스킬 세트를 사용합니다. 이 사이트의 영웅명·형태·매치업은 모두 중국판 기준이고 국제판 Honor of Kings 정보는 섞지 않았습니다.</p>
+<div class="fact-grid">
+<div class="fact"><span>첫 등장</span><strong>2024-06-27</strong><small>S36 시즌</small></div>
+<div class="fact"><span>현재 공식 시즌</span><strong>S45 月照长安</strong><small>2026-09-23 업데이트</small></div>
+<div class="fact"><span>직업 형태</span><strong>5개 완성</strong><small>刺客 S43 · 2026-04-01</small></div>
+<div class="fact"><span>공식 확인일</span><strong>2026-11-08</strong><small>중국 서버 기준</small></div>
+</div>
+<p class="note" style="margin-top:14px;padding:12px 14px;background:#f1f4f7;border:1px solid #dde4ea;border-radius:10px;color:#4a5663;font-size:13.5px">다섯 형태의 대응 라인은 이 프로젝트의 다섯 문서 분류와 공식 王者营地 가이드의 포지션 설명을 대조했습니다. 탱커는 国服对抗路, 사수는 百段发育路, 보조는 百段游走路 강사진과 함께한 공식 가이드가 있고, 법사 가이드는 상대 中路英雄을 기준으로 설명합니다. 刺客는 S43 공식 공지에서 打野英雄으로 명시됩니다. 형태의 존재와 출시일은 Tencent 공식 영웅 목록과 공식 영웅 소개 페이지에서 확인했습니다. 라인별 티어나 승률 같은 확인되지 않은 수치는 넣지 않았습니다.</p>
+</section>
+
+<section aria-labelledby="forms-title">
+<div class="section-head"><p class="kicker">다섯 형태</p>
+<h2 id="forms-title">형태별 대응 라인</h2></div>
+<div class="form-grid">
+<article class="form-card" style="--accent:#b3543f">
+<div class="form-top">
+<img class="form-icon" src="images/heroes/581.png" alt="元流之子(坦克)" width="56" height="56" loading="lazy" decoding="async">
+<div><h3 lang="zh-Hans">坦克</h3><span class="form-ko">탱커</span></div>
+</div>
+<p class="form-title">元流之子 · 止戈之道</p>
+<p class="form-lane"><strong>对抗路</strong> · 대항로</p>
+<p class="form-desc">원류지자 탱커 형태로 대항로에 설 때의 라인전과 합류 대응.</p>
+<div class="form-actions">
+<a class="btn" href="대항로.html">대항로 문서 →</a>
+<a class="link" href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_tank.shtml" target="_blank" rel="noopener noreferrer">공식 소개 ↗</a>
+</div>
+</article>
+<article class="form-card" style="--accent:#b07d2b">
+<div class="form-top">
+<img class="form-icon" src="images/heroes/584.jpg" alt="元流之子(射手)" width="56" height="56" loading="lazy" decoding="async">
+<div><h3 lang="zh-Hans">射手</h3><span class="form-ko">사수</span></div>
+</div>
+<p class="form-title">元流之子 · 沉舟之志</p>
+<p class="form-lane"><strong>发育路</strong> · 발육로</p>
+<p class="form-desc">원류지자 사수 형태로 발육로에 설 때의 안전한 파밍과 거리 유지.</p>
+<div class="form-actions">
+<a class="btn" href="발육로.html">발육로 문서 →</a>
+<a class="link" href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_archer.shtml" target="_blank" rel="noopener noreferrer">공식 소개 ↗</a>
+</div>
+</article>
+<article class="form-card" style="--accent:#6a4fa3">
+<div class="form-top">
+<img class="form-icon" src="images/heroes/582.png" alt="元流之子(法师)" width="56" height="56" loading="lazy" decoding="async">
+<div><h3 lang="zh-Hans">法师</h3><span class="form-ko">법사</span></div>
+</div>
+<p class="form-title">元流之子 · 万妙之心</p>
+<p class="form-lane"><strong>中路</strong> · 중로</p>
+<p class="form-desc">원류지자 법사 형태로 중로에 설 때의 라인 정리와 합류 대응.</p>
+<div class="form-actions">
+<a class="btn" href="중로.html">중로 문서 →</a>
+<a class="link" href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_magic.shtml" target="_blank" rel="noopener noreferrer">공식 소개 ↗</a>
+</div>
+</article>
+<article class="form-card" style="--accent:#2f7a5a">
+<div class="form-top">
+<img class="form-icon" src="images/heroes/583.jpg" alt="元流之子(刺客)" width="56" height="56" loading="lazy" decoding="async">
+<div><h3 lang="zh-Hans">刺客</h3><span class="form-ko">암살자</span></div>
+</div>
+<p class="form-title">元流之子 · 破局之识</p>
+<p class="form-lane"><strong>打野</strong> · 정글</p>
+<p class="form-desc">원류지자 암살자 형태로 정글을 돌 때의 동선과 역갱 대응.</p>
+<div class="form-actions">
+<a class="btn" href="정글.html">정글 문서 →</a>
+<a class="link" href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_assassin.shtml" target="_blank" rel="noopener noreferrer">공식 소개 ↗</a>
+</div>
+</article>
+<article class="form-card" style="--accent:#2f6f9e">
+<div class="form-top">
+<img class="form-icon" src="images/heroes/585.jpg" alt="元流之子(辅助)" width="56" height="56" loading="lazy" decoding="async">
+<div><h3 lang="zh-Hans">辅助</h3><span class="form-ko">보조</span></div>
+</div>
+<p class="form-title">元流之子 · 守望之诺</p>
+<p class="form-lane"><strong>游走</strong> · 유주</p>
+<p class="form-desc">원류지자 보조 형태로 유주를 맡을 때의 시야와 보호 대응.</p>
+<div class="form-actions">
+<a class="btn" href="유주.html">유주 문서 →</a>
+<a class="link" href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_support.shtml" target="_blank" rel="noopener noreferrer">공식 소개 ↗</a>
+</div>
+</article>
+</div>
+</section>
+<section aria-labelledby="season-title">
+<div class="section-head"><p class="kicker">버전·시즌</p>
+<h2 id="season-title">시즌·버전 확인</h2></div>
+<div class="fact-grid">
+<div class="fact"><span>적용 시즌</span><strong>S45 月照长安</strong><small>2026-09-23 업데이트 · 2026-11-08 현재</small></div>
+<div class="fact"><span>확인 서버</span><strong>중국판 王者荣耀</strong><small>국제판 정보 미사용</small></div>
+<div class="fact"><span>元流之子 형태</span><strong>坦克 · 射手 · 法师 · 刺客 · 辅助</strong><small>다섯 직업 완성</small></div>
+<div class="fact"><span>확인 날짜</span><strong>2026-11-08</strong><small>공식 페이지 조회</small></div>
+</div>
+<p class="note" style="margin-top:14px;padding:12px 14px;background:#fffaf0;border:1px solid #e8dcc3;border-left:4px solid var(--gold);border-radius:10px;color:#4b4333;font-size:13.5px"><strong>원문과의 차이:</strong> 다섯 문서의 ‘참고 기준’에는 S43 시즌 안내 링크가 남아 있습니다. 원문은 수정하지 않았고, 이 HTML에는 2026-11-08 공식 확인 기준 현재 시즌 S45 月照长安를 별도로 표시했습니다. 원문의 매치업 문장과 출처 링크는 그대로 보존했습니다.</p>
+<ul class="source-list">
+<li><a href="https://pvp.qq.com/cp/a20190320bbgxsmm/index.html" target="_blank" rel="noopener noreferrer">王者荣耀 공식 버전 안내</a> — S45 月照长安(2026-09-23), S43 陌上相逢(2026-04-01) 확인.</li>
+<li><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=625287" target="_blank" rel="noopener noreferrer">S36 업데이트 공지 — 元流之子</a> — 2024-06-27, 坦克·法师 첫 해금과 경기 전 직업 선택 설명.</li>
+<li><a href="https://pvp.qq.com/web201706/newsdetail.shtml?tid=797710" target="_blank" rel="noopener noreferrer">S43 업데이트 공지 — 元流之子·刺客</a> — 刺客 형태가 打野 영웅으로 추가되고 다섯 직업이 완성된 내용.</li>
+<li><a href="https://pvp.qq.com/web201605/js/herolist.json" target="_blank" rel="noopener noreferrer">Tencent 공식 영웅 목록 herolist.json</a> — 元流之子 다섯 형태의 cname·id_name·출시일 확인.</li>
+<li>공식 영웅 소개: <a href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_tank.shtml" target="_blank" rel="noopener noreferrer">坦克</a> · <a href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_archer.shtml" target="_blank" rel="noopener noreferrer">射手</a> · <a href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_magic.shtml" target="_blank" rel="noopener noreferrer">法师</a> · <a href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_assassin.shtml" target="_blank" rel="noopener noreferrer">刺客</a> · <a href="https://pvp.qq.com/web201605/herodetail/yuanliuzhizi_support.shtml" target="_blank" rel="noopener noreferrer">辅助</a>.</li>
+<li>공식 王者营地 포지션 가이드: <a href="https://pvp.qq.com/v/detail.shtml?tid=873821" target="_blank" rel="noopener noreferrer">坦克 · 对抗路</a> · <a href="https://pvp.qq.com/v/detail.shtml?tid=905078" target="_blank" rel="noopener noreferrer">射手 · 发育路</a> · <a href="https://pvp.qq.com/v/detail.shtml?tid=873397" target="_blank" rel="noopener noreferrer">法师 · 中路</a> · <a href="https://pvp.qq.com/v/detail.shtml?tid=927529" target="_blank" rel="noopener noreferrer">辅助 · 游走</a>. 刺客는 위 S43 공지에서 打野로 명시.</li>
+</ul>
+</section>
+<section aria-labelledby="lookup-title">
+<div class="section-head"><p class="kicker">빠른 찾기</p>
+<h2 id="lookup-title">라인별 대항 영웅 찾기</h2></div>
+<p class="lead">다섯 문서의 매치업 목록에서 영웅을 라인별로 모았습니다. 영웅 이름을 검색하거나 라인을 고르면 해당 문서의 설명 위치로 바로 이동합니다. 같은 영웅이 여러 라인에 나오는 것은 그 라인에서 만났을 때의 대응이 다르기 때문입니다.</p>
+<div class="lookup-panel">
+<div class="search-box">
+<label class="sr-only" for="heroSearch">영웅명 검색</label>
+<input id="heroSearch" type="search" placeholder="영웅명 검색 (간체 중국어, 예: 廉颇)" autocomplete="off">
+</div>
+<div class="filters" role="group" aria-label="라인 필터">
+<button class="filter-btn" type="button" data-lane="all" aria-pressed="true">전체</button>
+<button class="filter-btn" type="button" data-lane="대항로" aria-pressed="false">대항로</button>
+<button class="filter-btn" type="button" data-lane="발육로" aria-pressed="false">발육로</button>
+<button class="filter-btn" type="button" data-lane="중로" aria-pressed="false">중로</button>
+<button class="filter-btn" type="button" data-lane="정글" aria-pressed="false">정글</button>
+<button class="filter-btn" type="button" data-lane="유주" aria-pressed="false">유주</button>
+</div>
+<p id="lookupResult" class="lookup-result" aria-live="polite" data-total="209">209개 항목 · 5개 라인</p>
+</div>
+<section class="lane-block" data-lane="대항로" style="--accent:#b3543f">
+<div class="lane-block-head">
+<h3>대항로 <span class="cn">对抗路</span> <span class="form">元流之子 · 坦克</span></h3>
+<span class="lane-count">46</span>
+<a class="lane-open" href="대항로.html">대항로 문서 열기 →</a>
+</div>
+<ul class="hero-links">
+<li><a class="hero-link" href="대항로.html#hero-105" data-name="廉颇" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 廉颇 설명으로 이동"><img src="images/heroes/105.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">廉颇</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-117" data-name="钟无艳" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 钟无艳 설명으로 이동"><img src="images/heroes/117.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">钟无艳</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-120" data-name="白起" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 白起 설명으로 이동"><img src="images/heroes/120.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">白起</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-121" data-name="芈月" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 芈月 설명으로 이동"><img src="images/heroes/121.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">芈月</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-123" data-name="吕布" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 吕布 설명으로 이동"><img src="images/heroes/123.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">吕布</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-126" data-name="夏侯惇" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 夏侯惇 설명으로 이동"><img src="images/heroes/126.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">夏侯惇</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-128" data-name="曹操" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 曹操 설명으로 이동"><img src="images/heroes/128.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">曹操</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-134" data-name="达摩" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 达摩 설명으로 이동"><img src="images/heroes/134.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">达摩</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-135" data-name="项羽" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 项羽 설명으로 이동"><img src="images/heroes/135.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">项羽</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-139" data-name="老夫子" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 老夫子 설명으로 이동"><img src="images/heroes/139.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">老夫子</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-140" data-name="关羽" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 关羽 설명으로 이동"><img src="images/heroes/140.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">关羽</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-144" data-name="程咬金" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 程咬金 설명으로 이동"><img src="images/heroes/144.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">程咬金</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-149" data-name="刘邦" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 刘邦 설명으로 이동"><img src="images/heroes/149.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘邦</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-154" data-name="花木兰" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 花木兰 설명으로 이동"><img src="images/heroes/154.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">花木兰</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-166" data-name="亚瑟" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 亚瑟 설명으로 이동"><img src="images/heroes/166.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">亚瑟</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-178" data-name="杨戬" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 杨戬 설명으로 이동"><img src="images/heroes/178.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">杨戬</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-180" data-name="哪吒" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 哪吒 설명으로 이동"><img src="images/heroes/180.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">哪吒</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-198" data-name="梦奇" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 梦奇 설명으로 이동"><img src="images/heroes/198.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">梦奇</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-503" data-name="狂铁" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 狂铁 설명으로 이동"><img src="images/heroes/503.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">狂铁</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-125" data-name="元歌" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 元歌 설명으로 이동"><img src="images/heroes/125.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元歌</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-510" data-name="孙策" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 孙策 설명으로 이동"><img src="images/heroes/510.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙策</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-507" data-name="李信" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 李信 설명으로 이동"><img src="images/heroes/507.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">李信</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-511" data-name="猪八戒" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 猪八戒 설명으로 이동"><img src="images/heroes/511.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">猪八戒</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-518" data-name="马超" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 马超 설명으로 이동"><img src="images/heroes/518.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">马超</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-527" data-name="蒙恬" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 蒙恬 설명으로 이동"><img src="images/heroes/527.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蒙恬</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-536" data-name="夏洛特" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 夏洛特 설명으로 이동"><img src="images/heroes/536.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">夏洛特</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-141" data-name="貂蝉" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 貂蝉 설명으로 이동"><img src="images/heroes/141.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">貂蝉</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-537" data-name="司空震" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 司空震 설명으로 이동"><img src="images/heroes/537.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">司空震</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-564" data-name="姬小满" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 姬小满 설명으로 이동"><img src="images/heroes/564.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">姬小满</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-514" data-name="亚连" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 亚连 설명으로 이동"><img src="images/heroes/514.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">亚连</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-581" data-name="元流之子(坦克)" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 元流之子(坦克) 설명으로 이동"><img src="images/heroes/581.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(坦克)</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-558" data-name="影" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 影 설명으로 이동"><img src="images/heroes/558.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">影</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-172" data-name="蚩奼" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 蚩奼 설명으로 이동"><img src="images/heroes/172.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蚩奼</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-107" data-name="赵云" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 赵云 설명으로 이동"><img src="images/heroes/107.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵云</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-113" data-name="庄周" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 庄周 설명으로 이동"><img src="images/heroes/113.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">庄周</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-549" data-name="心魔六耳" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 心魔六耳 설명으로 이동"><img src="images/heroes/549.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">心魔六耳</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-163" data-name="橘右京" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 橘右京 설명으로 이동"><img src="images/heroes/163.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">橘右京</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-187" data-name="东皇太一" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 东皇太一 설명으로 이동"><img src="images/heroes/187.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">东皇太一</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-193" data-name="铠" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 铠 설명으로 이동"><img src="images/heroes/193.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">铠</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-194" data-name="苏烈" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 苏烈 설명으로 이동"><img src="images/heroes/194.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">苏烈</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-515" data-name="嫦娥" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 嫦娥 설명으로 이동"><img src="images/heroes/515.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">嫦娥</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-529" data-name="盘古" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 盘古 설명으로 이동"><img src="images/heroes/529.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">盘古</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-522" data-name="曜" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 曜 설명으로 이동"><img src="images/heroes/522.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">曜</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-544" data-name="赵怀真" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 赵怀真 설명으로 이동"><img src="images/heroes/544.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵怀真</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-563" data-name="海诺" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 海诺 설명으로 이동"><img src="images/heroes/563.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">海诺</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="대항로.html#hero-517" data-name="大司命" data-lane="대항로" data-form="坦克" aria-label="대항로 문서의 大司命 설명으로 이동"><img src="images/heroes/517.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大司命</span><span class="m">대항로 · 坦克</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul></section>
+<section class="lane-block" data-lane="발육로" style="--accent:#b07d2b">
+<div class="lane-block-head">
+<h3>발육로 <span class="cn">发育路</span> <span class="form">元流之子 · 射手</span></h3>
+<span class="lane-count">25</span>
+<a class="lane-open" href="발육로.html">발육로 문서 열기 →</a>
+</div>
+<ul class="hero-links">
+<li><a class="hero-link" href="발육로.html#hero-111" data-name="孙尚香" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 孙尚香 설명으로 이동"><img src="images/heroes/111.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙尚香</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-112" data-name="鲁班七号" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 鲁班七号 설명으로 이동"><img src="images/heroes/112.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">鲁班七号</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-132" data-name="马可波罗" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 马可波罗 설명으로 이동"><img src="images/heroes/132.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">马可波罗</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-133" data-name="狄仁杰" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 狄仁杰 설명으로 이동"><img src="images/heroes/133.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">狄仁杰</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-169" data-name="后羿" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 后羿 설명으로 이동"><img src="images/heroes/169.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">后羿</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-173" data-name="李元芳" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 李元芳 설명으로 이동"><img src="images/heroes/173.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">李元芳</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-174" data-name="虞姬" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 虞姬 설명으로 이동"><img src="images/heroes/174.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">虞姬</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-192" data-name="黄忠" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 黄忠 설명으로 이동"><img src="images/heroes/192.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">黄忠</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-196" data-name="百里守约" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 百里守约 설명으로 이동"><img src="images/heroes/196.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">百里守约</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-199" data-name="公孙离" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 公孙离 설명으로 이동"><img src="images/heroes/199.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">公孙离</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-508" data-name="伽罗" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 伽罗 설명으로 이동"><img src="images/heroes/508.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">伽罗</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-524" data-name="蒙犽" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 蒙犽 설명으로 이동"><img src="images/heroes/524.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蒙犽</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-155" data-name="艾琳" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 艾琳 설명으로 이동"><img src="images/heroes/155.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">艾琳</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-548" data-name="戈娅" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 戈娅 설명으로 이동"><img src="images/heroes/548.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">戈娅</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-545" data-name="莱西奥" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 莱西奥 설명으로 이동"><img src="images/heroes/545.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">莱西奥</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-519" data-name="敖隐" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 敖隐 설명으로 이동"><img src="images/heroes/519.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">敖隐</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-177" data-name="苍" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 苍 설명으로 이동"><img src="images/heroes/177.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">苍</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-584" data-name="元流之子(射手)" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 元流之子(射手) 설명으로 이동"><img src="images/heroes/584.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(射手)</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-151" data-name="孙权" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 孙权 설명으로 이동"><img src="images/heroes/151.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙权</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-119" data-name="扁鹊" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 扁鹊 설명으로 이동"><img src="images/heroes/119.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">扁鹊</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-125" data-name="元歌" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 元歌 설명으로 이동"><img src="images/heroes/125.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元歌</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-507" data-name="李信" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 李信 설명으로 이동"><img src="images/heroes/507.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">李信</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-537" data-name="司空震" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 司空震 설명으로 이동"><img src="images/heroes/537.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">司空震</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-172" data-name="蚩奼" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 蚩奼 설명으로 이동"><img src="images/heroes/172.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蚩奼</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="발육로.html#hero-533" data-name="阿古朵" data-lane="발육로" data-form="射手" aria-label="발육로 문서의 阿古朵 설명으로 이동"><img src="images/heroes/533.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">阿古朵</span><span class="m">발육로 · 射手</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul></section>
+<section class="lane-block" data-lane="중로" style="--accent:#6a4fa3">
+<div class="lane-block-head">
+<h3>중로 <span class="cn">中路</span> <span class="form">元流之子 · 法师</span></h3>
+<span class="lane-count">48</span>
+<a class="lane-open" href="중로.html">중로 문서 열기 →</a>
+</div>
+<ul class="hero-links">
+<li><a class="hero-link" href="중로.html#hero-106" data-name="小乔" data-lane="중로" data-form="法师" aria-label="중로 문서의 小乔 설명으로 이동"><img src="images/heroes/106.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">小乔</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-108" data-name="墨子" data-lane="중로" data-form="法师" aria-label="중로 문서의 墨子 설명으로 이동"><img src="images/heroes/108.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">墨子</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-109" data-name="妲己" data-lane="중로" data-form="法师" aria-label="중로 문서의 妲己 설명으로 이동"><img src="images/heroes/109.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">妲己</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-110" data-name="嬴政" data-lane="중로" data-form="法师" aria-label="중로 문서의 嬴政 설명으로 이동"><img src="images/heroes/110.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">嬴政</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-115" data-name="高渐离" data-lane="중로" data-form="法师" aria-label="중로 문서의 高渐离 설명으로 이동"><img src="images/heroes/115.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">高渐离</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-119" data-name="扁鹊" data-lane="중로" data-form="法师" aria-label="중로 문서의 扁鹊 설명으로 이동"><img src="images/heroes/119.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">扁鹊</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-124" data-name="周瑜" data-lane="중로" data-form="法师" aria-label="중로 문서의 周瑜 설명으로 이동"><img src="images/heroes/124.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">周瑜</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-127" data-name="甄姬" data-lane="중로" data-form="法师" aria-label="중로 문서의 甄姬 설명으로 이동"><img src="images/heroes/127.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">甄姬</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-136" data-name="武则天" data-lane="중로" data-form="法师" aria-label="중로 문서의 武则天 설명으로 이동"><img src="images/heroes/136.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">武则天</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-141" data-name="貂蝉" data-lane="중로" data-form="法师" aria-label="중로 문서의 貂蝉 설명으로 이동"><img src="images/heroes/141.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">貂蝉</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-142" data-name="安琪拉" data-lane="중로" data-form="法师" aria-label="중로 문서의 安琪拉 설명으로 이동"><img src="images/heroes/142.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">安琪拉</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-148" data-name="姜子牙" data-lane="중로" data-form="法师" aria-label="중로 문서의 姜子牙 설명으로 이동"><img src="images/heroes/148.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">姜子牙</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-152" data-name="王昭君" data-lane="중로" data-form="法师" aria-label="중로 문서의 王昭君 설명으로 이동"><img src="images/heroes/152.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">王昭君</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-156" data-name="张良" data-lane="중로" data-form="法师" aria-label="중로 문서의 张良 설명으로 이동"><img src="images/heroes/156.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">张良</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-157" data-name="不知火舞" data-lane="중로" data-form="法师" aria-label="중로 문서의 不知火舞 설명으로 이동"><img src="images/heroes/157.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">不知火舞</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-190" data-name="诸葛亮" data-lane="중로" data-form="法师" aria-label="중로 문서의 诸葛亮 설명으로 이동"><img src="images/heroes/190.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">诸葛亮</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-182" data-name="干将莫邪" data-lane="중로" data-form="法师" aria-label="중로 문서의 干将莫邪 설명으로 이동"><img src="images/heroes/182.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">干将莫邪</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-179" data-name="女娲" data-lane="중로" data-form="法师" aria-label="중로 문서의 女娲 설명으로 이동"><img src="images/heroes/179.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">女娲</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-176" data-name="杨玉环" data-lane="중로" data-form="法师" aria-label="중로 문서의 杨玉环 설명으로 이동"><img src="images/heroes/176.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">杨玉环</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-197" data-name="弈星" data-lane="중로" data-form="法师" aria-label="중로 문서의 弈星 설명으로 이동"><img src="images/heroes/197.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">弈星</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-504" data-name="米莱狄" data-lane="중로" data-form="法师" aria-label="중로 문서의 米莱狄 설명으로 이동"><img src="images/heroes/504.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">米莱狄</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-312" data-name="沈梦溪" data-lane="중로" data-form="法师" aria-label="중로 문서의 沈梦溪 설명으로 이동"><img src="images/heroes/312.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">沈梦溪</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-513" data-name="上官婉儿" data-lane="중로" data-form="法师" aria-label="중로 문서의 上官婉儿 설명으로 이동"><img src="images/heroes/513.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">上官婉儿</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-515" data-name="嫦娥" data-lane="중로" data-form="法师" aria-label="중로 문서의 嫦娥 설명으로 이동"><img src="images/heroes/515.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">嫦娥</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-523" data-name="西施" data-lane="중로" data-form="法师" aria-label="중로 문서의 西施 설명으로 이동"><img src="images/heroes/523.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">西施</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-540" data-name="金蝉" data-lane="중로" data-form="法师" aria-label="중로 문서의 金蝉 설명으로 이동"><img src="images/heroes/540.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">金蝉</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-521" data-name="海月" data-lane="중로" data-form="法师" aria-label="중로 문서의 海月 설명으로 이동"><img src="images/heroes/521.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">海月</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-563" data-name="海诺" data-lane="중로" data-form="法师" aria-label="중로 문서의 海诺 설명으로 이동"><img src="images/heroes/563.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">海诺</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-582" data-name="元流之子(法师)" data-lane="중로" data-form="法师" aria-label="중로 문서의 元流之子(法师) 설명으로 이동"><img src="images/heroes/582.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(法师)</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-186" data-name="太乙真人" data-lane="중로" data-form="法师" aria-label="중로 문서의 太乙真人 설명으로 이동"><img src="images/heroes/186.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">太乙真人</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-191" data-name="大乔" data-lane="중로" data-form="法师" aria-label="중로 문서의 大乔 설명으로 이동"><img src="images/heroes/191.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大乔</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-137" data-name="司马懿" data-lane="중로" data-form="法师" aria-label="중로 문서의 司马懿 설명으로 이동"><img src="images/heroes/137.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">司马懿</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-149" data-name="刘邦" data-lane="중로" data-form="法师" aria-label="중로 문서의 刘邦 설명으로 이동"><img src="images/heroes/149.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘邦</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-126" data-name="夏侯惇" data-lane="중로" data-form="法师" aria-label="중로 문서의 夏侯惇 설명으로 이동"><img src="images/heroes/126.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">夏侯惇</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-114" data-name="刘禅" data-lane="중로" data-form="法师" aria-label="중로 문서의 刘禅 설명으로 이동"><img src="images/heroes/114.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘禅</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-118" data-name="孙膑" data-lane="중로" data-form="法师" aria-label="중로 문서의 孙膑 설명으로 이동"><img src="images/heroes/118.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙膑</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-113" data-name="庄周" data-lane="중로" data-form="法师" aria-label="중로 문서의 庄周 설명으로 이동"><img src="images/heroes/113.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">庄周</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-175" data-name="钟馗" data-lane="중로" data-form="法师" aria-label="중로 문서의 钟馗 설명으로 이동"><img src="images/heroes/175.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">钟馗</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-171" data-name="张飞" data-lane="중로" data-form="法师" aria-label="중로 문서의 张飞 설명으로 이동"><img src="images/heroes/171.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">张飞</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-189" data-name="鬼谷子" data-lane="중로" data-form="法师" aria-label="중로 문서의 鬼谷子 설명으로 이동"><img src="images/heroes/189.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">鬼谷子</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-184" data-name="蔡文姬" data-lane="중로" data-form="法师" aria-label="중로 문서의 蔡文姬 설명으로 이동"><img src="images/heroes/184.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蔡文姬</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-168" data-name="牛魔" data-lane="중로" data-form="法师" aria-label="중로 문서의 牛魔 설명으로 이동"><img src="images/heroes/168.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">牛魔</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-501" data-name="明世隐" data-lane="중로" data-form="法师" aria-label="중로 문서의 明世隐 설명으로 이동"><img src="images/heroes/501.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">明世隐</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-194" data-name="苏烈" data-lane="중로" data-form="法师" aria-label="중로 문서의 苏烈 설명으로 이동"><img src="images/heroes/194.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">苏烈</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-585" data-name="元流之子(辅助)" data-lane="중로" data-form="法师" aria-label="중로 문서의 元流之子(辅助) 설명으로 이동"><img src="images/heroes/585.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(辅助)</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-188" data-name="大禹" data-lane="중로" data-form="法师" aria-label="중로 문서의 大禹 설명으로 이동"><img src="images/heroes/188.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大禹</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-581" data-name="元流之子(坦克)" data-lane="중로" data-form="法师" aria-label="중로 문서의 元流之子(坦克) 설명으로 이동"><img src="images/heroes/581.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(坦克)</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="중로.html#hero-544" data-name="赵怀真" data-lane="중로" data-form="法师" aria-label="중로 문서의 赵怀真 설명으로 이동"><img src="images/heroes/544.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵怀真</span><span class="m">중로 · 法师</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul></section>
+<section class="lane-block" data-lane="정글" style="--accent:#2f7a5a">
+<div class="lane-block-head">
+<h3>정글 <span class="cn">打野</span> <span class="form">元流之子 · 刺客</span></h3>
+<span class="lane-count">52</span>
+<a class="lane-open" href="정글.html">정글 문서 열기 →</a>
+</div>
+<ul class="hero-links">
+<li><a class="hero-link" href="정글.html#hero-107" data-name="赵云" data-lane="정글" data-form="刺客" aria-label="정글 문서의 赵云 설명으로 이동"><img src="images/heroes/107.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵云</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-116" data-name="阿轲" data-lane="정글" data-form="刺客" aria-label="정글 문서의 阿轲 설명으로 이동"><img src="images/heroes/116.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">阿轲</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-167" data-name="孙悟空" data-lane="정글" data-form="刺客" aria-label="정글 문서의 孙悟空 설명으로 이동"><img src="images/heroes/167.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙悟空</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-129" data-name="典韦" data-lane="정글" data-form="刺客" aria-label="정글 문서의 典韦 설명으로 이동"><img src="images/heroes/129.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">典韦</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-130" data-name="宫本武藏" data-lane="정글" data-form="刺客" aria-label="정글 문서의 宫本武藏 설명으로 이동"><img src="images/heroes/130.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">宫本武藏</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-131" data-name="李白" data-lane="정글" data-form="刺客" aria-label="정글 문서의 李白 설명으로 이동"><img src="images/heroes/131.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">李白</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-146" data-name="露娜" data-lane="정글" data-form="刺客" aria-label="정글 문서의 露娜 설명으로 이동"><img src="images/heroes/146.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">露娜</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-150" data-name="韩信" data-lane="정글" data-form="刺客" aria-label="정글 문서의 韩信 설명으로 이동"><img src="images/heroes/150.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">韩信</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-153" data-name="兰陵王" data-lane="정글" data-form="刺客" aria-label="정글 문서의 兰陵王 설명으로 이동"><img src="images/heroes/153.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">兰陵王</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-162" data-name="娜可露露" data-lane="정글" data-form="刺客" aria-label="정글 문서의 娜可露露 설명으로 이동"><img src="images/heroes/162.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">娜可露露</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-170" data-name="刘备" data-lane="정글" data-form="刺客" aria-label="정글 문서의 刘备 설명으로 이동"><img src="images/heroes/170.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘备</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-183" data-name="雅典娜" data-lane="정글" data-form="刺客" aria-label="정글 문서의 雅典娜 설명으로 이동"><img src="images/heroes/183.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">雅典娜</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-195" data-name="百里玄策" data-lane="정글" data-form="刺客" aria-label="정글 문서의 百里玄策 설명으로 이동"><img src="images/heroes/195.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">百里玄策</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-502" data-name="裴擒虎" data-lane="정글" data-form="刺客" aria-label="정글 문서의 裴擒虎 설명으로 이동"><img src="images/heroes/502.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">裴擒虎</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-137" data-name="司马懿" data-lane="정글" data-form="刺客" aria-label="정글 문서의 司马懿 설명으로 이동"><img src="images/heroes/137.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">司马懿</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-506" data-name="云中君" data-lane="정글" data-form="刺客" aria-label="정글 문서의 云中君 설명으로 이동"><img src="images/heroes/506.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">云中君</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-531" data-name="镜" data-lane="정글" data-form="刺客" aria-label="정글 문서의 镜 설명으로 이동"><img src="images/heroes/531.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">镜</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-533" data-name="阿古朵" data-lane="정글" data-form="刺客" aria-label="정글 문서의 阿古朵 설명으로 이동"><img src="images/heroes/533.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">阿古朵</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-528" data-name="澜" data-lane="정글" data-form="刺客" aria-label="정글 문서의 澜 설명으로 이동"><img src="images/heroes/528.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">澜</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-538" data-name="云缨" data-lane="정글" data-form="刺客" aria-label="정글 문서의 云缨 설명으로 이동"><img src="images/heroes/538.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">云缨</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-542" data-name="暃" data-lane="정글" data-form="刺客" aria-label="정글 문서의 暃 설명으로 이동"><img src="images/heroes/542.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">暃</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-517" data-name="大司命" data-lane="정글" data-form="刺客" aria-label="정글 문서의 大司命 설명으로 이동"><img src="images/heroes/517.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大司命</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-558" data-name="影" data-lane="정글" data-form="刺客" aria-label="정글 문서의 影 설명으로 이동"><img src="images/heroes/558.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">影</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-583" data-name="元流之子(刺客)" data-lane="정글" data-form="刺客" aria-label="정글 문서의 元流之子(刺客) 설명으로 이동"><img src="images/heroes/583.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(刺客)</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-138" data-name="王维" data-lane="정글" data-form="刺客" aria-label="정글 문서의 王维 설명으로 이동"><img src="images/heroes/138.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">王维</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-117" data-name="钟无艳" data-lane="정글" data-form="刺客" aria-label="정글 문서의 钟无艳 설명으로 이동"><img src="images/heroes/117.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">钟无艳</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-549" data-name="心魔六耳" data-lane="정글" data-form="刺客" aria-label="정글 문서의 心魔六耳 설명으로 이동"><img src="images/heroes/549.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">心魔六耳</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-120" data-name="白起" data-lane="정글" data-form="刺客" aria-label="정글 문서의 白起 설명으로 이동"><img src="images/heroes/120.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">白起</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-121" data-name="芈月" data-lane="정글" data-form="刺客" aria-label="정글 문서의 芈月 설명으로 이동"><img src="images/heroes/121.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">芈月</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-126" data-name="夏侯惇" data-lane="정글" data-form="刺客" aria-label="정글 문서의 夏侯惇 설명으로 이동"><img src="images/heroes/126.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">夏侯惇</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-128" data-name="曹操" data-lane="정글" data-form="刺客" aria-label="정글 문서의 曹操 설명으로 이동"><img src="images/heroes/128.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">曹操</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-144" data-name="程咬金" data-lane="정글" data-form="刺客" aria-label="정글 문서의 程咬金 설명으로 이동"><img src="images/heroes/144.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">程咬金</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-163" data-name="橘右京" data-lane="정글" data-form="刺客" aria-label="정글 문서의 橘右京 설명으로 이동"><img src="images/heroes/163.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">橘右京</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-166" data-name="亚瑟" data-lane="정글" data-form="刺客" aria-label="정글 문서의 亚瑟 설명으로 이동"><img src="images/heroes/166.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">亚瑟</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-173" data-name="李元芳" data-lane="정글" data-form="刺客" aria-label="정글 문서의 李元芳 설명으로 이동"><img src="images/heroes/173.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">李元芳</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-178" data-name="杨戬" data-lane="정글" data-form="刺客" aria-label="정글 문서의 杨戬 설명으로 이동"><img src="images/heroes/178.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">杨戬</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-180" data-name="哪吒" data-lane="정글" data-form="刺客" aria-label="정글 문서의 哪吒 설명으로 이동"><img src="images/heroes/180.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">哪吒</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-190" data-name="诸葛亮" data-lane="정글" data-form="刺客" aria-label="정글 문서의 诸葛亮 설명으로 이동"><img src="images/heroes/190.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">诸葛亮</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-193" data-name="铠" data-lane="정글" data-form="刺客" aria-label="정글 문서의 铠 설명으로 이동"><img src="images/heroes/193.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">铠</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-198" data-name="梦奇" data-lane="정글" data-form="刺客" aria-label="정글 문서의 梦奇 설명으로 이동"><img src="images/heroes/198.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">梦奇</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-176" data-name="杨玉环" data-lane="정글" data-form="刺客" aria-label="정글 문서의 杨玉环 설명으로 이동"><img src="images/heroes/176.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">杨玉环</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-510" data-name="孙策" data-lane="정글" data-form="刺客" aria-label="정글 문서의 孙策 설명으로 이동"><img src="images/heroes/510.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙策</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-515" data-name="嫦娥" data-lane="정글" data-form="刺客" aria-label="정글 문서의 嫦娥 설명으로 이동"><img src="images/heroes/515.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">嫦娥</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-511" data-name="猪八戒" data-lane="정글" data-form="刺客" aria-label="정글 문서의 猪八戒 설명으로 이동"><img src="images/heroes/511.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">猪八戒</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-529" data-name="盘古" data-lane="정글" data-form="刺客" aria-label="정글 문서의 盘古 설명으로 이동"><img src="images/heroes/529.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">盘古</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-522" data-name="曜" data-lane="정글" data-form="刺客" aria-label="정글 문서의 曜 설명으로 이동"><img src="images/heroes/522.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">曜</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-518" data-name="马超" data-lane="정글" data-form="刺客" aria-label="정글 문서의 马超 설명으로 이동"><img src="images/heroes/518.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">马超</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-544" data-name="赵怀真" data-lane="정글" data-form="刺客" aria-label="정글 문서의 赵怀真 설명으로 이동"><img src="images/heroes/544.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵怀真</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-537" data-name="司空震" data-lane="정글" data-form="刺客" aria-label="정글 문서의 司空震 설명으로 이동"><img src="images/heroes/537.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">司空震</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-177" data-name="苍" data-lane="정글" data-form="刺客" aria-label="정글 문서의 苍 설명으로 이동"><img src="images/heroes/177.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">苍</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-172" data-name="蚩奼" data-lane="정글" data-form="刺客" aria-label="정글 문서의 蚩奼 설명으로 이동"><img src="images/heroes/172.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蚩奼</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="정글.html#hero-581" data-name="元流之子(坦克)" data-lane="정글" data-form="刺客" aria-label="정글 문서의 元流之子(坦克) 설명으로 이동"><img src="images/heroes/581.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(坦克)</span><span class="m">정글 · 刺客</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul></section>
+<section class="lane-block" data-lane="유주" style="--accent:#2f6f9e">
+<div class="lane-block-head">
+<h3>유주 <span class="cn">游走</span> <span class="form">元流之子 · 辅助</span></h3>
+<span class="lane-count">38</span>
+<a class="lane-open" href="유주.html">유주 문서 열기 →</a>
+</div>
+<ul class="hero-links">
+<li><a class="hero-link" href="유주.html#hero-105" data-name="廉颇" data-lane="유주" data-form="辅助" aria-label="유주 문서의 廉颇 설명으로 이동"><img src="images/heroes/105.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">廉颇</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-108" data-name="墨子" data-lane="유주" data-form="辅助" aria-label="유주 문서의 墨子 설명으로 이동"><img src="images/heroes/108.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">墨子</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-113" data-name="庄周" data-lane="유주" data-form="辅助" aria-label="유주 문서의 庄周 설명으로 이동"><img src="images/heroes/113.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">庄周</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-114" data-name="刘禅" data-lane="유주" data-form="辅助" aria-label="유주 문서의 刘禅 설명으로 이동"><img src="images/heroes/114.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘禅</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-118" data-name="孙膑" data-lane="유주" data-form="辅助" aria-label="유주 문서의 孙膑 설명으로 이동"><img src="images/heroes/118.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">孙膑</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-168" data-name="牛魔" data-lane="유주" data-form="辅助" aria-label="유주 문서의 牛魔 설명으로 이동"><img src="images/heroes/168.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">牛魔</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-171" data-name="张飞" data-lane="유주" data-form="辅助" aria-label="유주 문서의 张飞 설명으로 이동"><img src="images/heroes/171.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">张飞</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-175" data-name="钟馗" data-lane="유주" data-form="辅助" aria-label="유주 문서의 钟馗 설명으로 이동"><img src="images/heroes/175.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">钟馗</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-184" data-name="蔡文姬" data-lane="유주" data-form="辅助" aria-label="유주 문서의 蔡文姬 설명으로 이동"><img src="images/heroes/184.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">蔡文姬</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-186" data-name="太乙真人" data-lane="유주" data-form="辅助" aria-label="유주 문서의 太乙真人 설명으로 이동"><img src="images/heroes/186.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">太乙真人</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-191" data-name="大乔" data-lane="유주" data-form="辅助" aria-label="유주 문서의 大乔 설명으로 이동"><img src="images/heroes/191.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大乔</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-187" data-name="东皇太一" data-lane="유주" data-form="辅助" aria-label="유주 문서의 东皇太一 설명으로 이동"><img src="images/heroes/187.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">东皇太一</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-189" data-name="鬼谷子" data-lane="유주" data-form="辅助" aria-label="유주 문서의 鬼谷子 설명으로 이동"><img src="images/heroes/189.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">鬼谷子</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-194" data-name="苏烈" data-lane="유주" data-form="辅助" aria-label="유주 문서의 苏烈 설명으로 이동"><img src="images/heroes/194.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">苏烈</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-501" data-name="明世隐" data-lane="유주" data-form="辅助" aria-label="유주 문서의 明世隐 설명으로 이동"><img src="images/heroes/501.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">明世隐</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-509" data-name="盾山" data-lane="유주" data-form="辅助" aria-label="유주 문서의 盾山 설명으로 이동"><img src="images/heroes/509.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">盾山</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-505" data-name="瑶" data-lane="유주" data-form="辅助" aria-label="유주 문서의 瑶 설명으로 이동"><img src="images/heroes/505.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">瑶</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-525" data-name="鲁班大师" data-lane="유주" data-form="辅助" aria-label="유주 문서의 鲁班大师 설명으로 이동"><img src="images/heroes/525.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">鲁班大师</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-534" data-name="桑启" data-lane="유주" data-form="辅助" aria-label="유주 문서의 桑启 설명으로 이동"><img src="images/heroes/534.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">桑启</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-159" data-name="朵莉亚" data-lane="유주" data-form="辅助" aria-label="유주 문서의 朵莉亚 설명으로 이동"><img src="images/heroes/159.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">朵莉亚</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-577" data-name="少司缘" data-lane="유주" data-form="辅助" aria-label="유주 문서의 少司缘 설명으로 이동"><img src="images/heroes/577.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">少司缘</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-550" data-name="空空儿" data-lane="유주" data-form="辅助" aria-label="유주 문서의 空空儿 설명으로 이동"><img src="images/heroes/550.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">空空儿</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-585" data-name="元流之子(辅助)" data-lane="유주" data-form="辅助" aria-label="유주 문서의 元流之子(辅助) 설명으로 이동"><img src="images/heroes/585.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(辅助)</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-188" data-name="大禹" data-lane="유주" data-form="辅助" aria-label="유주 문서의 大禹 설명으로 이동"><img src="images/heroes/188.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">大禹</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-547" data-name="卢雅那" data-lane="유주" data-form="辅助" aria-label="유주 문서의 卢雅那 설명으로 이동"><img src="images/heroes/547.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">卢雅那</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-126" data-name="夏侯惇" data-lane="유주" data-form="辅助" aria-label="유주 문서의 夏侯惇 설명으로 이동"><img src="images/heroes/126.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">夏侯惇</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-135" data-name="项羽" data-lane="유주" data-form="辅助" aria-label="유주 문서의 项羽 설명으로 이동"><img src="images/heroes/135.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">项羽</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-140" data-name="关羽" data-lane="유주" data-form="辅助" aria-label="유주 문서의 关羽 설명으로 이동"><img src="images/heroes/140.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">关羽</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-148" data-name="姜子牙" data-lane="유주" data-form="辅助" aria-label="유주 문서의 姜子牙 설명으로 이동"><img src="images/heroes/148.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">姜子牙</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-149" data-name="刘邦" data-lane="유주" data-form="辅助" aria-label="유주 문서의 刘邦 설명으로 이동"><img src="images/heroes/149.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">刘邦</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-152" data-name="王昭君" data-lane="유주" data-form="辅助" aria-label="유주 문서의 王昭君 설명으로 이동"><img src="images/heroes/152.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">王昭君</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-156" data-name="张良" data-lane="유주" data-form="辅助" aria-label="유주 문서의 张良 설명으로 이동"><img src="images/heroes/156.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">张良</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-176" data-name="杨玉环" data-lane="유주" data-form="辅助" aria-label="유주 문서의 杨玉环 설명으로 이동"><img src="images/heroes/176.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">杨玉环</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-523" data-name="西施" data-lane="유주" data-form="辅助" aria-label="유주 문서의 西施 설명으로 이동"><img src="images/heroes/523.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">西施</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-540" data-name="金蝉" data-lane="유주" data-form="辅助" aria-label="유주 문서의 金蝉 설명으로 이동"><img src="images/heroes/540.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">金蝉</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-544" data-name="赵怀真" data-lane="유주" data-form="辅助" aria-label="유주 문서의 赵怀真 설명으로 이동"><img src="images/heroes/544.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">赵怀真</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-119" data-name="扁鹊" data-lane="유주" data-form="辅助" aria-label="유주 문서의 扁鹊 설명으로 이동"><img src="images/heroes/119.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">扁鹊</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="hero-link" href="유주.html#hero-581" data-name="元流之子(坦克)" data-lane="유주" data-form="辅助" aria-label="유주 문서의 元流之子(坦克) 설명으로 이동"><img src="images/heroes/581.png" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="txt"><span class="n" lang="zh-Hans">元流之子(坦克)</span><span class="m">유주 · 辅助</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul></section>
+<p id="emptyState" class="empty" hidden>검색 결과가 없습니다. 간체 중국어 영웅명이나 라인 이름으로 다시 검색해 보세요.</p>
+</section>
+<section aria-labelledby="docs-title">
+<div class="section-head"><p class="kicker">라인 문서</p>
+<h2 id="docs-title">다섯 라인 문서</h2></div>
+<div class="doc-grid">
+<a class="doc-card" href="대항로.html" style="--accent:#b3543f">
+<span class="doc-form">元流之子 · 坦克 / 탱커</span>
+<span class="doc-title">대항로 <span class="cn">对抗路</span></span>
+<span class="doc-meta-line">매치업 46개 · 기본 계획 · 참고 기준</span>
+<span class="doc-arrow">문서 열기 →</span>
+</a>
+<a class="doc-card" href="발육로.html" style="--accent:#b07d2b">
+<span class="doc-form">元流之子 · 射手 / 사수</span>
+<span class="doc-title">발육로 <span class="cn">发育路</span></span>
+<span class="doc-meta-line">매치업 25개 · 기본 계획 · 참고 기준</span>
+<span class="doc-arrow">문서 열기 →</span>
+</a>
+<a class="doc-card" href="중로.html" style="--accent:#6a4fa3">
+<span class="doc-form">元流之子 · 法师 / 법사</span>
+<span class="doc-title">중로 <span class="cn">中路</span></span>
+<span class="doc-meta-line">매치업 49개 · 기본 계획 · 참고 기준</span>
+<span class="doc-arrow">문서 열기 →</span>
+</a>
+<a class="doc-card" href="정글.html" style="--accent:#2f7a5a">
+<span class="doc-form">元流之子 · 刺客 / 암살자</span>
+<span class="doc-title">정글 <span class="cn">打野</span></span>
+<span class="doc-meta-line">매치업 52개 · 기본 계획 · 참고 기준</span>
+<span class="doc-arrow">문서 열기 →</span>
+</a>
+<a class="doc-card" href="유주.html" style="--accent:#2f6f9e">
+<span class="doc-form">元流之子 · 辅助 / 보조</span>
+<span class="doc-title">유주 <span class="cn">游走</span></span>
+<span class="doc-meta-line">매치업 38개 · 기본 계획 · 참고 기준</span>
+<span class="doc-arrow">문서 열기 →</span>
+</a>
+</div></section>
+<section aria-labelledby="files-title">
+<div class="section-head"><p class="kicker">파일 대응</p>
+<h2 id="files-title">생성된 HTML과 원본 Markdown</h2></div>
+<ul class="file-list">
+<li><a href="대항로.html">대항로.html</a><span>← 대항로.md · 매치업 46개</span></li>
+<li><a href="발육로.html">발육로.html</a><span>← 발육로.md · 매치업 25개</span></li>
+<li><a href="중로.html">중로.html</a><span>← 중로.md · 매치업 49개</span></li>
+<li><a href="정글.html">정글.html</a><span>← 정글.md · 매치업 52개</span></li>
+<li><a href="유주.html">유주.html</a><span>← 유주.md · 매치업 38개</span></li>
+<li><a href="index.html">index.html</a><span>← 다섯 문서 요약 + 元流之子 개요 + 라인별 대항 영웅 찾기</span></li>
+</ul>
+<p class="note" style="margin-top:12px;font-size:13px;color:var(--muted)">AGENTS.md는 지침으로만 읽었고 HTML로 변환하지 않았습니다. 원본 .md 파일은 수정하지 않았습니다.</p>
+</section>
+<section aria-labelledby="checks-title">
+<div class="section-head"><p class="kicker">검증</p>
+<h2 id="checks-title">변환 검증과 출처</h2></div>
+<ul class="check-list">
+<li>원문 5개 Markdown의 모든 문장을 HTML 텍스트와 대조해 누락이 없음을 확인했습니다.</li>
+<li>영웅 초상화 133종(210개 참조)이 모두 <code>images/heroes/</code>에 존재하고, 각 HTML의 상대 경로가 맞습니다.</li>
+<li>6개 HTML의 내부 링크·앵커와 페이지 간 이동을 확인했습니다.</li>
+<li>모든 페이지가 UTF-8이며 한국어와 간체 중국어를 함께 표시합니다. 모바일 뷰포트 메타를 포함했습니다.</li>
+<li>원본 .md와 AGENTS.md의 체크섬이 변환 전후 동일합니다.</li>
+</ul>
+<p class="note" style="margin-top:12px;padding:12px 14px;background:#f1f4f7;border:1px solid #dde4ea;border-radius:10px;color:#4a5663;font-size:13.5px">검색·필터는 브라우저에서만 동작하며 외부 스크립트를 불러오지 않습니다. 이미지도 로컬 <code>images/heroes/</code>만 사용합니다.</p>
+<p style="font-size:13px;color:var(--muted);margin-top:12px">전체 고유 영웅 133명 · 라인별 항목 209개(같은 영웅이 여러 라인에 나오면 각 라인에 포함, 한 라인 안 중복은 첫 항목으로 연결). 기준일 2026-11-08, 중국판 《王者荣耀》.</p>
+</section>
+</main>
+<script>
+(function () {
+  var input = document.getElementById('heroSearch');
+  if (!input) return;
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('.lane-block'));
+  var result = document.getElementById('lookupResult');
+  var empty = document.getElementById('emptyState');
+  var total = result.getAttribute('data-total');
+  var lane = 'all';
+
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    blocks.forEach(function (block) {
+      var visible = 0;
+      Array.prototype.forEach.call(block.querySelectorAll('.hero-link'), function (link) {
+        var item = link.closest('li');
+        var hay = (link.getAttribute('data-name') + ' ' + link.getAttribute('data-lane') + ' ' +
+                   link.getAttribute('data-form') + ' ' + block.getAttribute('data-lane')).toLowerCase();
+        var ok = (lane === 'all' || block.getAttribute('data-lane') === lane) && (!q || hay.indexOf(q) !== -1);
+        item.hidden = !ok;
+        if (ok) visible += 1;
+      });
+      block.querySelector('.lane-count').textContent = visible;
+      block.hidden = visible === 0;
+      shown += visible;
+    });
+    result.textContent = (q || lane !== 'all') ? (shown + '개 항목 표시') : total + '개 항목 · 5개 라인';
+    empty.hidden = shown !== 0;
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      lane = button.getAttribute('data-lane');
+      buttons.forEach(function (other) {
+        other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+      });
+      apply();
+    });
+  });
+  input.addEventListener('input', apply);
+  apply();
+})();
+</script>
+<footer class="site-footer">
+<div class="footer-inner">
+<p><strong>중국판 《王者荣耀》 기준</strong> · 원문 Markdown 5개를 HTML로 변환 · 2026-11-08 확인</p>
+<p>영웅명은 중국판 간체 중국어 표기. 국제판 Honor of Kings 정보는 사용하지 않았습니다.</p>
+<p>게임 수치·재사용 대기시간·아이템 효율은 패치에 따라 달라질 수 있으므로 게임 안의 최신 설명을 우선하세요.</p>
+<a class="footer-top" href="#top">↑ 맨 위로</a>
+</div>
+</footer>
+</body>
+</html>
